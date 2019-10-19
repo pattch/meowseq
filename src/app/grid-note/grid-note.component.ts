@@ -10,7 +10,6 @@ export class GridNoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    alert('Hello this is a test');
   }
 
 }
