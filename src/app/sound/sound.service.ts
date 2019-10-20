@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class SoundService {
 
   constructor() { }
+
+  playSound(sound: string) {
+    console.log(sound);
+  }
 }
