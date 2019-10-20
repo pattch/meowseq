@@ -15,6 +15,6 @@
     cursor: pointer;
   }
 
-.note.active {
-    background-color: #00dFc3;
+.note.current {
+    opacity: .3;
 }
