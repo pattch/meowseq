@@ -29,4 +29,16 @@ export class GridData {
         }
         return rows;
     }
+    getActiveNotes(index: number):Note[]{
+        const notes: Note[] = [];  
+        for(const row of this.rows){
+            const note = row[index];
+            if(note.active){
+                notes.push(note);
+
+            }
+        }
+        return notes;
+        
+    }
 }
