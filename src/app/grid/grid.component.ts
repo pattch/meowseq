@@ -9,7 +9,9 @@ import {GridDataService} from '../grid-data/grid-data.service';
 export class GridComponent implements OnInit {
   readonly grid = this.gridService.gridData;
 
-  constructor(private readonly gridService: GridDataService) { }
+  constructor(
+      private readonly gridService: GridDataService,
+    ) { }
 
   ngOnInit() {
   }

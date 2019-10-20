@@ -12,7 +12,7 @@ export class GridNoteComponent implements OnInit {
   @Input() note: Note;
   @Output() noteChange = new EventEmitter<Note>();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 
