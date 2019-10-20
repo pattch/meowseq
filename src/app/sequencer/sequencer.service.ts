@@ -15,7 +15,13 @@ export class SequencerService {
   private paused = false;
   readonly heartbeat = timer(1000, QUARTER_NOTE);
   readonly current = this.heartbeat.pipe(
-    map((tick) => tick % this.gridData.patternLength));
+    map((tick) => {
+      if (!this.paused) {
+        return tick % this.gridData.patternLength;
+      }
+
+      return 0;
+    }));
 
   constructor(
     private readonly gridService: GridDataService,
