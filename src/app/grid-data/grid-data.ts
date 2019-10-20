@@ -1,26 +1,31 @@
 import {Note} from './note';
+import { GridRow } from './grid-row';
 
-export type Grid = ReadonlyArray<ReadonlyArray<Note>>;
+export type Grid = ReadonlyArray<GridRow>;
 
 export class GridData {
-    readonly rows: Grid;
+    readonly rows: ReadonlyArray<GridRow>;
 
     constructor(readonly patternLength = 8,
                 readonly scale = ['A', 'B', 'C']) {
                     this.rows = this.createRows();
                 }
 
-    private createRows(): ReadonlyArray<ReadonlyArray<Note>> {
-        const rows: Array<ReadonlyArray<Note>> = [];
+    private createRows(): Grid {
+        const rows: GridRow[] = [];
         for (const note of this.scale) {
-            const row: Note[] = [];
+            const notes: Note[] = [];
             for (let i = 0; i < this.patternLength; i++) {
-                row.push({
+                notes.push({
                     active: false,
                     sound: note,
                 });
             }
-            rows.push(row);
+            rows.push({
+                patternLength: this.patternLength,
+                sound: note,
+                notes
+            });
         }
         return rows;
     }

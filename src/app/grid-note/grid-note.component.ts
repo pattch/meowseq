@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridNoteComponent implements OnInit {
 
-    active = false;
-    
+  active = false;
 
   constructor() { }
 
-    toggleActive() {
-        this.active = !this.active;
-    }
+  ngOnInit() {}
+
+  toggleActive() {
+      this.active = !this.active;
+  }
 
 }
