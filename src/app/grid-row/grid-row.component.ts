@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Note } from '../grid-data/note';
 import { SequencerService } from '../sequencer/sequencer.service';
 import { Observable } from 'rxjs';
@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-grid-row',
   templateUrl: './grid-row.component.html',
-  styleUrls: ['./grid-row.component.css']
+  styleUrls: ['./grid-row.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GridRowComponent implements OnInit {
 
