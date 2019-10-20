@@ -1,0 +1,15 @@
+body {
+    background-color: #000;
+}
+
+$colors: (1:#00dFc3, 2:#0f0, 3:#B100FF, 4:#F6FF00, 5:#FA00FF, 6:#FF6300, 7:#00FFA0, 8:#00B5FF, 9:#9500FF, 10:#FF0071, 11:#FDFF00, 12:#14D17C);
+
+@each $value, $color in $colors {
+    .grid-container .grid-row:nth-child(#{$value}) .note.active {
+        background-color: $color;
+    }
+    .grid-container .grid-row:nth-child(#{$value}) .note:hover {
+        box-shadow: 0 0 10px 0 $color inset, 0 0 2px 0px $color;
+        border: 0px solid $color;
+    }
+}
