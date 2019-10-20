@@ -1,5 +1,16 @@
 body {
     background-color: #000;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 2px;
+}
+
+.grid-container {
+    display: inline-block;
 }
 
 $colors: (1:#00dFc3, 2:#0f0, 3:#B100FF, 4:#F6FF00, 5:#FA00FF, 6:#FF6300, 7:#00FFA0, 8:#00B5FF, 9:#9500FF, 10:#FF0071, 11:#FDFF00, 12:#14D17C);
