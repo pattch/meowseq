@@ -2,30 +2,14 @@ body {
     background-color: #000;
 }
 
-$colors: #00dFc3, #0f0, #B100FF;
+$colors: (1:#00dFc3, 2:#0f0, 3:#B100FF);
 
 @each $value, $color in $colors {
-    .grid-container .grid-row:nth-child($colors.index) .note.active {
+    .grid-container .grid-row:nth-child(#{$value}) .note.active {
         background-color: $color;
     }
-    .grid-container .grid-row:nth-child($colors.index) .note:hover {
+    .grid-container .grid-row:nth-child(#{$value}) .note:hover {
         box-shadow: 0 0 10px 0 $color inset, 0 0 2px 0px $color;
         border: 0px solid $color;
     }
 }
-
-//.grid-container .grid-row:nth-child(2) .note.active {
-//    background-color: #0F0;
-//}
-//.grid-container .grid-row:nth-child(2) .note:hover {
-//    box-shadow: 0 0 10px 0 #0f0 inset, 0 0 2px 0px #0f0;
-//    border: 0px solid #0f0;
-//}
-//
-//.grid-container .grid-row:nth-child(3) .note.active {
-//    background-color: #B100FF;
-//}
-//.grid-container .grid-row:nth-child(3) .note:hover {
-//    box-shadow: 0 0 10px 0 #B100FF inset, 0 0 2px 0px #B100FF;
-//    border: 0px solid #B100FF;
-//}

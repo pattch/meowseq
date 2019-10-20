@@ -2,29 +2,29 @@ body {
   background-color: #000;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note.active {
+.grid-container .grid-row:nth-child(1) .note.active {
   background-color: #00dFc3;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note:hover {
+.grid-container .grid-row:nth-child(1) .note:hover {
   box-shadow: 0 0 10px 0 #00dFc3 inset, 0 0 2px 0px #00dFc3;
   border: 0px solid #00dFc3;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note.active {
+.grid-container .grid-row:nth-child(2) .note.active {
   background-color: #0f0;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note:hover {
+.grid-container .grid-row:nth-child(2) .note:hover {
   box-shadow: 0 0 10px 0 #0f0 inset, 0 0 2px 0px #0f0;
   border: 0px solid #0f0;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note.active {
+.grid-container .grid-row:nth-child(3) .note.active {
   background-color: #B100FF;
 }
 
-.grid-container .grid-row:nth-child(n+1) .note:hover {
+.grid-container .grid-row:nth-child(3) .note:hover {
   box-shadow: 0 0 10px 0 #B100FF inset, 0 0 2px 0px #B100FF;
   border: 0px solid #B100FF;
 }
