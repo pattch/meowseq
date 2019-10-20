@@ -5,13 +5,14 @@ import {map} from 'rxjs/operators';
 import { AudioService } from '../sound/audio.service';
 
 const EIGHTH_NOTE = 63; // 1/8 note in 120 bpm = 62.5 ms
+const QUARTER_NOTE = 125; // 1/4 note in 120 bpm = 125 ms
 
 @Injectable({
   providedIn: 'root'
 })
 export class SequencerService {
   private gridData = this.gridService.gridData;
-  readonly heartbeat = timer(1000, EIGHTH_NOTE);
+  readonly heartbeat = timer(1000, QUARTER_NOTE);
   readonly current = this.heartbeat.pipe(
     map((tick) => tick % this.gridData.patternLength));
 
