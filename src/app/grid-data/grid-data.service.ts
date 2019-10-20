@@ -5,10 +5,10 @@ import { GridData } from './grid-data';
 // TODO: Pull this from some backend
 const PATTERN_LENGTH = 16;
 const SCALE = [
-  'hitat1.wav',
-  'hitat2.wav',
-  'hitat3.wav',
-  'hitat4.wav',
+  'hihat1.wav',
+  'hihat2.wav',
+  'hihat3.wav',
+  'hihat4.wav',
   'ride.wav',
   'rim.wav',
   'snare1.wav',
