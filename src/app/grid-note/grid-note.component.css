@@ -7,16 +7,14 @@
     border-radius: 8px;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
-    margin-right: 7px;
+    margin-right: 5px;
+    margin-bottom: -2px;
 }
 
 .note:hover {
-    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 2px 0px #00d7c3;
-    border: 0px solid #00d7c3;
     cursor: pointer;
   }
 
 .note.active {
     background-color: #00dFc3;
 }
-
