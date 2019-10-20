@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Note } from '../grid-data/note';
 
 @Component({
   selector: 'app-grid-note',
   templateUrl: './grid-note.component.html',
-  styleUrls: ['./grid-note.component.css']
+  styleUrls: ['./grid-note.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GridNoteComponent implements OnInit {
 
-  active = false;
+  @Input() note: Note;
+  @Output() noteChange = new EventEmitter<Note>();
 
   constructor() { }
 
   ngOnInit() {}
 
   toggleActive() {
-    this.active = !this.active;
+    this.note.active = !this.note.active;
+    this.noteChange.emit(this.note);
   }
 
 }
