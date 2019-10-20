@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import {GridDataModule} from './grid-data.module';
 import { GridData } from './grid-data';
 
 // TODO: Pull this from some backend
