@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Note } from '../grid-data/note';
 
 @Component({
   selector: 'app-grid-row',
@@ -7,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GridRowComponent implements OnInit {
 
-    @Input() patternLength: number = 8;
+  @Input() patternLength: number = 8;
+  @Input() notes: Note[];
 
   constructor() { }
 

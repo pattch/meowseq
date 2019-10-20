@@ -1,6 +1,7 @@
 <div class="grid-container">
     <div class="grid-row" *ngFor="let row of grid.rows">
-        <!-- TODO: Create GridRow object -->
-        <app-grid-row [patternLength]="grid.patternLength"></app-grid-row>
+        <app-grid-row [patternLength]="grid.patternLength"
+                      [notes]="row.notes">
+        </app-grid-row>
     </div>
 </div>
