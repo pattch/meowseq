@@ -12,6 +12,7 @@ const QUARTER_NOTE = 125; // 1/4 note in 120 bpm = 125 ms
 })
 export class SequencerService {
   private gridData = this.gridService.gridData;
+  private paused = false;
   readonly heartbeat = timer(1000, QUARTER_NOTE);
   readonly current = this.heartbeat.pipe(
     map((tick) => tick % this.gridData.patternLength));
@@ -24,8 +25,18 @@ export class SequencerService {
   initialize() {
     this.audioService.loadAudioClips(this.gridService.scale);
     this.current.subscribe((current) => {
-      const activeNotes = this.gridData.getActiveNotes(current);
-      this.audioService.triggerAudio(activeNotes);
+      if (!this.paused) {
+        const activeNotes = this.gridData.getActiveNotes(current);
+        this.audioService.triggerAudio(activeNotes);
+      }
     });
+  }
+
+  togglePaused() {
+    this.paused = !this.paused;
+  }
+
+  get isPaused() {
+    return this.paused;
   }
 }
