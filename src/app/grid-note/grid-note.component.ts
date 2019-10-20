@@ -10,10 +10,13 @@ import { AudioService } from '../sound/audio.service';
 })
 export class GridNoteComponent implements OnInit {
 
+  @Input() current: boolean;
   @Input() note: Note;
   @Output() noteChange = new EventEmitter<Note>();
 
-  constructor(private readonly audioService: AudioService) {}
+  constructor(
+    private readonly audioService: AudioService,
+  ) {}
 
   ngOnInit() {}
 

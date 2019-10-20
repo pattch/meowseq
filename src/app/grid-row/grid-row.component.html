@@ -1,5 +1,7 @@
 <div class="grid-row">
-    <span *ngFor="let note of notes">
-        <app-grid-note [(note)]="note"></app-grid-note>
+    <span *ngFor="let note of notes; index as i">
+        <app-grid-note [(note)]="note" 
+                       [current]="(current | async) === i">
+        </app-grid-note>
     </span>
 </div>
