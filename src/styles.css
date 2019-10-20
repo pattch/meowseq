@@ -25,35 +25,6 @@ body {
 }
 
 .grid-container .grid-row:nth-child(3) .note:hover {
-<<<<<<< HEAD
-    box-shadow: 0 0 10px 0 #B100FF inset, 0 0 2px 0px #B100FF;
-    border: 0px solid #B100FF;
-}
-
-.grid-container .grid-row:nth-child(4) .note.active {
-    background-color: #F6FF00;
-}
-.grid-container .grid-row:nth-child(4) .note:hover {
-    box-shadow: 0 0 10px 0 #F6FF00 inset, 0 0 2px 0px #F6FF00;
-    border: 0px solid #F6FF00;
-}
-
-.grid-container .grid-row:nth-child(5) .note.active {
-    background-color: #FA00FF;
-}
-.grid-container .grid-row:nth-child(5) .note:hover {
-    box-shadow: 0 0 10px 0 #FA00FF inset, 0 0 2px 0px #FA00FF;
-    border: 0px solid #FA00FF;
-}
-
-.grid-container .grid-row:nth-child(6) .note.active {
-    background-color: #FF6300;
-}
-.grid-container .grid-row:nth-child(6) .note:hover {
-    box-shadow: 0 0 10px 0 #FF6300 inset, 0 0 2px 0px #FF6300;
-    border: 0px solid #FF6300;
-}
-=======
   box-shadow: 0 0 10px 0 #B100FF inset, 0 0 2px 0px #B100FF;
   border: 0px solid #B100FF;
 }
