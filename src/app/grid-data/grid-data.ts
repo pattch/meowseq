@@ -32,9 +32,9 @@ export class GridData {
 
     getActiveNotes(index: number): Note[] {
         const notes: Note[] = [];
-        for(const row of this.rows) {
-            const note = row[index];
-            if (note.active){
+        for (const row of this.rows) {
+            const note = row.notes[index];
+            if (note.active) {
                 notes.push(note);
             }
         }
