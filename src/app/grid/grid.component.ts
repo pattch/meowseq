@@ -11,7 +11,7 @@ export class GridComponent implements OnInit {
 
   constructor(
       private readonly gridService: GridDataService,
-    ) { }
+    ) {}
 
   ngOnInit() {
   }
