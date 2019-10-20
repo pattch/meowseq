@@ -4,7 +4,21 @@ import { GridData } from './grid-data';
 
 // TODO: Pull this from some backend
 const PATTERN_LENGTH = 16;
-const SCALE = ['meow.wav', 'meow2.wav', 'meow3.wav'];
+const SCALE = [
+  'hitat1.wav',
+  'hitat2.wav',
+  'hitat3.wav',
+  'hitat4.wav',
+  'ride.wav',
+  'rim.wav',
+  'snare1.wav',
+  'snare2.wav',
+  'tom1.wav',
+  'tom2.wav',
+  'meow3.wav',
+  'kick1.wav',
+  'kick2.wav',
+];
 
 @Injectable({
   providedIn: 'root'
