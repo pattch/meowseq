@@ -1,4 +1,5 @@
 .note {
+    display: inline-block;
     background-color: #999;
     border-color: #666;
     height: 50px;

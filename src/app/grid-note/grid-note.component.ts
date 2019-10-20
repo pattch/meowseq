@@ -14,7 +14,7 @@ export class GridNoteComponent implements OnInit {
   ngOnInit() {}
 
   toggleActive() {
-      this.active = !this.active;
+    this.active = !this.active;
   }
 
 }
