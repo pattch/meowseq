@@ -5,9 +5,16 @@
     height: 50px;
     width: 50px;
     border-radius: 10px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     margin: 5px;
 }
 
+.note:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 2px 0px #00d7c3;
+    border: 0px solid #00d7c3;
+  }
+
 .note.active {
-    background-color: #0F0;
+    background-color: #00dFc3;
 }
