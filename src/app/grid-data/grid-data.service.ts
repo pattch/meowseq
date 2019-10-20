@@ -28,4 +28,7 @@ export class GridDataService {
 
   constructor() {}
 
+  get scale(): string[] {
+    return SCALE;
+  }
 }

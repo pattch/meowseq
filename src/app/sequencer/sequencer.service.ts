@@ -22,6 +22,7 @@ export class SequencerService {
   ) {}
 
   initialize() {
+    this.audioService.loadAudioClips(this.gridService.scale);
     this.current.subscribe((current) => {
       const activeNotes = this.gridData.getActiveNotes(current);
       this.audioService.triggerAudio(activeNotes);

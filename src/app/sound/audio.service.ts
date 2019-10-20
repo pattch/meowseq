@@ -9,16 +9,29 @@ const AUDIO_DIR = '../../../assets/';
 export class AudioService {
   constructor() { }
 
+  clips: any = {};
+
   async playAudioClip(clip: string) {
-    const audio = new Audio();
-    audio.src = AUDIO_DIR + clip;
-    await audio.load();
-    await audio.play();
+    const audio = this.clips[clip];
+    if (audio.paused) {
+      await audio.play();
+    } else {
+      audio.currentTime = 0;
+    }
   }
 
   async triggerAudio(notes: Note[]) {
     await Promise.all(
       notes.map((note) => this.playAudioClip(note.sound))
     );
+  }
+
+  async loadAudioClips(clips: string[]) {
+    for (const clip of clips) {
+      const audio = new Audio();
+      audio.src = AUDIO_DIR + clip;
+      await audio.load();
+      this.clips[clip] = audio;
+    }
   }
 }
