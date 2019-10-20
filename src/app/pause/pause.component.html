@@ -1,0 +1,5 @@
+
+<button (click)="togglePaused()">
+    <ng-container *ngIf="paused">PLAY</ng-container>
+    <ng-container *ngIf="!paused">PAUSE</ng-container>
+</button>
