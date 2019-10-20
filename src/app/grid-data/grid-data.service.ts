@@ -4,7 +4,7 @@ import { GridData } from './grid-data';
 
 // TODO: Pull this from some backend
 const PATTERN_LENGTH = 16;
-const SCALE = ['G', 'F', 'E', 'D', 'C', 'B', 'A'];
+const SCALE = ['meow.wav', 'meow2.wav', 'meow3.wav'];
 
 @Injectable({
   providedIn: 'root'

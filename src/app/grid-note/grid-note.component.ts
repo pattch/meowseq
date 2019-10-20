@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Note } from '../grid-data/note';
+import { AudioService } from '../sound/audio.service';
 
 @Component({
   selector: 'app-grid-note',
@@ -12,11 +13,12 @@ export class GridNoteComponent implements OnInit {
   @Input() note: Note;
   @Output() noteChange = new EventEmitter<Note>();
 
-  constructor() {}
+  constructor(private readonly audioService: AudioService) {}
 
   ngOnInit() {}
 
   toggleActive() {
+    this.audioService.playAudioClip(this.note.sound);
     this.note.active = !this.note.active;
     this.noteChange.emit(this.note);
   }
