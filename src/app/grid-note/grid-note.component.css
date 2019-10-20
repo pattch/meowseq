@@ -1,0 +1,12 @@
+.note {
+    background-color: #999;
+    border-color: #666;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.note.active {
+    background-color: #0F0;
+}
