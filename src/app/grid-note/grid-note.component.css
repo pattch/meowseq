@@ -1,20 +1,22 @@
 .note {
     display: inline-block;
-    background-color: #999;
-    border-color: #666;
+    background-color: #535353;
+    border-color: #505050;
     height: 50px;
     width: 50px;
-    border-radius: 10px;
+    border-radius: 8px;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
-    margin: 5px;
+    margin-right: 7px;
 }
 
 .note:hover {
     box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 2px 0px #00d7c3;
     border: 0px solid #00d7c3;
+    cursor: pointer;
   }
 
 .note.active {
     background-color: #00dFc3;
 }
+
